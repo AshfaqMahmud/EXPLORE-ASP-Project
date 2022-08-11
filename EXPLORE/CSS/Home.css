@@ -1,0 +1,47 @@
+﻿* {
+    margin: 0px;
+    font-family: 'Fauna One', serif;
+}
+
+.header h1 {
+    margin: 0px;
+    padding: 200px 100px;
+    color: #f8fafa;
+    text-align: center;
+    letter-spacing: 15px;
+    font-size: 120px;
+    background-image: url(img/home2.jpg);
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.navbar {
+    background-color: rgb(15, 223, 238);
+    float: right;
+    padding: 14px 16px;
+}
+
+    .navbar a {
+        padding: 14px 16px;
+        color: #300107;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        .navbar a:hover {
+            background-color: rgba(0, 0, 0, 0.37);
+            color: rgb(171, 183, 230);
+        }
+
+        .navbar a.active {
+            background-color: #0a4d99;
+            color: white;
+        }
+
+footer {
+    padding: 300px;
+    margin-top: 40px;
+    background-image: url(img/footer.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
