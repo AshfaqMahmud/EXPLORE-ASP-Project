@@ -48,6 +48,12 @@ namespace EXPLORE.Account
                     }
                     Response.Redirect("Home.aspx");
                 }
+                else if(TextBox1.Text.ToString()=="admin" && TextBox2.Text.ToString() == "admin")
+                {
+                    Session["fullname"] = "Admin";
+                    Session["role"] = "admin";
+                    Response.Redirect("Home.aspx");
+                }
                 else
                 {
                     Response.Write("<script>alert('Invalid credentials');</script>");

@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="blogdemo.aspx" />
+    <Content Include="BlogHome.aspx" />
+    <Content Include="blogHome.html" />
     <Content Include="img\africa.jpg" />
     <Content Include="img\asia.jpg" />
     <Content Include="img\australia.jpg" />
@@ -2146,8 +2148,8 @@
     <Content Include="img\home2.jpg" />
     <Content Include="img\home_bg.jpg" />
     <Content Include="Home.aspx" />
-    <Content Include="WebForm2.aspx" />
     <Content Include="writeBlog.aspx" />
+    <Content Include="BlogMaster.Master" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="img\homebanner.jpg" />
     <Content Include="img\pexels-gradienta-6985001 %281%29.jpg" />
@@ -2186,6 +2188,20 @@
     </Compile>
     <Compile Include="blogdemo.aspx.designer.cs">
       <DependentUpon>blogdemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BlogHome.aspx.cs">
+      <DependentUpon>BlogHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlogHome.aspx.designer.cs">
+      <DependentUpon>BlogHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BlogMaster.Master.cs">
+      <DependentUpon>BlogMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlogMaster.Master.designer.cs">
+      <DependentUpon>BlogMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="labtest.aspx.cs">
       <DependentUpon>labtest.aspx</DependentUpon>
@@ -2335,13 +2351,6 @@
     <Compile Include="samerica.aspx.designer.cs">
       <DependentUpon>samerica.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-    </Compile>
     <Compile Include="writeBlog.aspx.cs">
       <DependentUpon>writeBlog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2369,7 +2378,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Admin\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

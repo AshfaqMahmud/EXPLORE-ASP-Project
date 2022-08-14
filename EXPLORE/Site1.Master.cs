@@ -17,12 +17,12 @@ namespace EXPLORE
         {
             try
             {
-                if (Session["role"].Equals(""))
+                if (Session["role"].Equals("admin"))
                 {
-                    LinkButton1.Visible = true; // user login link button
-
-                    LinkButton3.Visible = false; // logout link button
-                    LinkButton7.Visible = false; // hello user link button
+                    LinkButton3.Visible = true; // logout link button
+                    LinkButton7.Visible = true; // hello user link button
+                    LinkButton7.Text = "Hello " + Session["fullname"].ToString();
+                    LinkButton1.Visible = false; // user login link button
 
 
                     /*LinkButton6.Visible = true; // admin login link button
@@ -48,11 +48,12 @@ namespace EXPLORE
                 }
                 else if (!Session["role"].Equals(""))
                 {
+                   
                     LinkButton1.Visible = true; // user login link button
 
                     LinkButton3.Visible = false; // logout link button
                     LinkButton7.Visible = false; // hello user link button
-
+                   
                 }
             }
             
