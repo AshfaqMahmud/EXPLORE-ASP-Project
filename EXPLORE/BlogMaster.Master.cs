@@ -11,6 +11,12 @@ namespace EXPLORE
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //CurrentDate.Text = DateTime.Now.ToString();
+            //Timer1.Enabled = true;
+        }
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            time_label.Text = DateTime.Now.ToString();
 
         }
     }

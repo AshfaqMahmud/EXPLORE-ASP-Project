@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <div class="card" style="padding: 10px; margin-top: 5em; background-repeat: no-repeat; background-attachment: scroll; background-color: #99FFCC;">
-                    <asp:TextBox ID="CurrentDate" runat="server"></asp:TextBox>
+                    
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
