@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AdminPanel.aspx" />
     <Content Include="blogdemo.aspx" />
     <Content Include="BlogHome.aspx" />
     <Content Include="blogHome.html" />
@@ -2150,6 +2151,7 @@
     <Content Include="Home.aspx" />
     <Content Include="writeBlog.aspx" />
     <Content Include="BlogMaster.Master" />
+    <Content Include="AdminMaster.Master" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="img\homebanner.jpg" />
     <Content Include="img\pexels-gradienta-6985001 %281%29.jpg" />
@@ -2181,6 +2183,20 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel.aspx.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel.aspx.designer.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
     </Compile>
     <Compile Include="blogdemo.aspx.cs">
       <DependentUpon>blogdemo.aspx</DependentUpon>
