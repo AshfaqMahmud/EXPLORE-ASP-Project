@@ -15,46 +15,46 @@ namespace EXPLORE
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!Page.IsPostBack)
+            /*if(!Page.IsPostBack)
             {
                 
                 blogCat.Items.Insert(0, "--Select Category");
-            }
+            }*/
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+    
+        protected void Button1_Click1(object sender, EventArgs e)
         {
-            
-            string dateNow = DateTime.Now.ToString();
+
+            /// string dateNow = DateTime.Now.ToString();
+            String dateNow = "Ashfaq";
 
             try
             {
-                SqlConnection conn = new SqlConnection(strcon);
-                if (conn.State == ConnectionState.Closed)
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
                 {
-                    conn.Open();
+                    con.Open();
                 }
 
-                String query = "insert into [dbo].[blog] (bTitle,bCategory,bDesc,bUrl,bDate) values (@blogtitle,@blogcat,@blogdesc,@blogurl,@datenow)";
-                SqlCommand sqlcomm = new SqlCommand(query, conn);
-                sqlcomm.Parameters.AddWithValue("@blogtitle", blogTitle.Text.Trim());
+                //String query = "INSERT INTO blog (bTitle,bCategory,bDesc,bUrl,bDate) values (@blogtitle,@blogcat,@blogdesc,@blogurl,@datenow)";
+                SqlCommand sqlcomm = new SqlCommand("INSERT INTO blog (bTitle,bCategory,bDesc,bUrl,bDate) values (@blogtitle,@blogcat,@blogdesc,@blogurl,@datenow)", con);
+                sqlcomm.Parameters.AddWithValue("@blogtitle", blogTitle.Text);
                 sqlcomm.Parameters.AddWithValue("@blogcat", blogCat.SelectedItem.Text.ToString());
                 sqlcomm.Parameters.AddWithValue("@blogdesc", blogDesc.Text.Trim());
                 sqlcomm.Parameters.AddWithValue("@blogurl", "--");
                 sqlcomm.Parameters.AddWithValue("@datenow", dateNow);
-                Response.Write("<script>alert('Post added to queue, wait for approval');</script>");
+                //Response.Write("<script>alert('Post added to queue, wait for approval');</script>");
                 sqlcomm.ExecuteNonQuery();
-                conn.Close();
-                Response.Write("<script>alert('Post added to queue, wait for approval');</script>");
+                con.Close();
+                Response.Redirect("Home.aspx");
+               // Response.Write("<script>alert('Post added to queue, wait for approval');</script>");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
-
-        
-        
     }
 }

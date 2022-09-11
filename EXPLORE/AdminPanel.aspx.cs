@@ -25,7 +25,7 @@ namespace EXPLORE
                     conn.Open();
                 }
 
-                String query = "select bId,bTitle,bCategory,bDate,bStatus from [dbo].[blog]";
+                String query = "select bId,bTitle,bCategory,bDate,bStatus from blog";
                 SqlCommand sqlcomm = new SqlCommand(query, conn);
                 SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
                 DataTable dt = new DataTable();
@@ -46,7 +46,7 @@ namespace EXPLORE
 
         protected void gview_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/BlogShow.aspx?" + "ID=" + ((LinkButton)sender).Text);
         }
     }
 }

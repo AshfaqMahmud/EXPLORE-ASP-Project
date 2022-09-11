@@ -12,17 +12,15 @@
         <asp:Panel ID="Panel1" runat="server"></asp:Panel>
         <asp:GridView ID="gview" runat="server" AutoGenerateColumns="false" Width="100%" OnSelectedIndexChanged="gview_SelectedIndexChanged">
             <Columns>
-                <asp:BoundField DataField="BID" HeaderText="Blog ID" />
+                <asp:TemplateField HeaderText="Blog ID">
+                <ItemTemplate>
+                        <asp:LinkButton ID="BID"  runat="server" Text='<%# Eval("bID")%>' OnClick="gview_SelectedIndexChanged" />
+                 </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="BTitle" HeaderText="Title" />
                 <asp:BoundField DataField="BCategory" HeaderText="Category" />
                 <asp:BoundField DataField="BDate" HeaderText="Posted on" />
                 <asp:BoundField DataField="BStatus" HeaderText="Status" />
-                <asp:TemplateField>
-                    <ItemTemplate>
-                        <asp:LinkButton ID="selectBlog" Text="Select" runat="server" CommandArgument='<%# Eval("bID")%>' OnClick="gview_SelectedIndexChanged" />
-                    </ItemTemplate>
-                    
-                </asp:TemplateField>
             </Columns>
         </asp:GridView>
     

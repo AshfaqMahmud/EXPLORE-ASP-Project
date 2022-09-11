@@ -52,7 +52,7 @@ namespace EXPLORE.Account
                 {
                     Session["fullname"] = "Admin";
                     Session["role"] = "admin";
-                    Response.Redirect("Home.aspx");
+                    Response.Redirect("AdminPanel.aspx");
                 }
                 else
                 {

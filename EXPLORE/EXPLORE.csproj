@@ -71,7 +71,7 @@
     <Content Include="AdminPanel.aspx" />
     <Content Include="blogdemo.aspx" />
     <Content Include="BlogHome.aspx" />
-    <Content Include="blogHome.html" />
+    <Content Include="BlogShow.aspx" />
     <Content Include="img\africa.jpg" />
     <Content Include="img\asia.jpg" />
     <Content Include="img\australia.jpg" />
@@ -2218,6 +2218,13 @@
     </Compile>
     <Compile Include="BlogMaster.Master.designer.cs">
       <DependentUpon>BlogMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BlogShow.aspx.cs">
+      <DependentUpon>BlogShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlogShow.aspx.designer.cs">
+      <DependentUpon>BlogShow.aspx</DependentUpon>
     </Compile>
     <Compile Include="labtest.aspx.cs">
       <DependentUpon>labtest.aspx</DependentUpon>
