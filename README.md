@@ -5,7 +5,7 @@ EXPLORE is a web application built with ASP.NET Core that empowers you to discov
 Features:
 
 Explore Places: Browse a curated collection of breathtaking locations, complete with descriptions, images, and potentially ratings or reviews.
-Share Your Travels: Post insightful blogs or reviews about the places you've visited, enriching the platform with valuable content. (Consider mentioning any user authentication or content management features here)
+Share Your Travels: Post insightful blogs or reviews about the places you've visited, enriching the platform with valuable content.
 Getting Started
 
 This section will guide you through setting up and running EXPLORE locally.
